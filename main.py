@@ -1,50 +1,53 @@
-# menu = {"popcorn":20,
-#         "apple":10,
-#         "banana":10,
-#         "toffee":5}
+# Pyhton Banking Program
 
-# cart =[]
-# total =0
+def showBalance():
+    print(f"Your Balance is: ${balance:.2f}")
 
-# print("-----Our Menu-----")
-# for item, price in menu.items():
-#     print(f"{item:10}: ${price:.2f}")
-
-# print("----------------")
-
-# while True:
-#     food = input("Select an item (q to quit): ").lower()
-#     if food == "q":
-#         break
-#     elif menu.get(food) is not None:
-#         cart.append(food)
-
-# for food in cart:
-#     total += menu.get(food)
-#     print(food , end=" ")
-
-# print()
-# print(f"Your total is: {total:.2f}")
-
-#Random number guess
-
-# import random
-
-# low =1
-# high = 100
-# num = random.randint(1,100)
-
-# while True:
-#     guess = input("Enter the guess number (999 to quit): ")
-#     if guess == 999:
-#         break
-#     elif guess == num:
-#         print("🤑")
-#     else:
-#         print("🥹")
-
-grades = [45,80,96,72,49,60,52]
-
-grades = [grade for grade in grades if grade>=60]
-print(grades)
+def deposit():
+    amnt = float(input("Enter the amount to be deposited: $"))
+    if amnt<0:
+        print("Enter the valid amount")
+        return 0
+    else:    
+        return amnt
     
+def withdraw():
+    amnt = float(input("Enter the amount to be withdrawn: $"))
+    if amnt > balance:
+        print("Insufficient Balance")
+        return 0
+    elif amnt < 0:
+        print("Enter the valid amount")
+        return 0
+    else:
+        return amnt    
+    
+
+balance = 0
+is_Running = True
+
+while is_Running:
+    print("Ok Bank")
+    print("1.Show Balance")
+    print("2.Deposit")
+    print("3.Withdraw")
+    print("4.Exit")
+    
+    choice = input("Enter the selected choice(1-4): ")
+    
+    if choice == "1":
+        showBalance()
+    
+    elif choice == "2":
+        balance += deposit()
+    
+    elif choice == "3":
+        balance += withdraw()
+
+    elif choice == "4":
+        is_Running = False
+    
+    else:
+        print("Enter valid choice.")
+    
+print("GoodBye")     
