@@ -28,18 +28,23 @@
 
 #Random number guess
 
-import random
+# import random
 
-low =1
-high = 100
-num = random.randint(1,100)
+# low =1
+# high = 100
+# num = random.randint(1,100)
 
-while True:
-    guess = input("Enter the guess number (999 to quit): ")
-    if guess == 999:
-        break
-    elif guess == num:
-        print("🤑")
-    else:
-        print("🥹")
+# while True:
+#     guess = input("Enter the guess number (999 to quit): ")
+#     if guess == 999:
+#         break
+#     elif guess == num:
+#         print("🤑")
+#     else:
+#         print("🥹")
+
+grades = [45,80,96,72,49,60,52]
+
+grades = [grade for grade in grades if grade>=60]
+print(grades)
     
