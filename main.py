@@ -42,7 +42,7 @@ while is_Running:
         balance += deposit()
     
     elif choice == "3":
-        balance += withdraw()
+        balance -= withdraw()
 
     elif choice == "4":
         is_Running = False
