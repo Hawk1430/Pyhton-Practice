@@ -12,7 +12,6 @@ class Circle(Shape):
         self.radius = radius
         
         # Method overriding
-        #
     def describe(self):
         print(f"It has an area of {3.14 * self.radius * self.radius} cm^2.")
         super().describe()
