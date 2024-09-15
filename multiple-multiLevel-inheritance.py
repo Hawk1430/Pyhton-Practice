@@ -32,7 +32,7 @@ class Fish(Prey, Predator):
     pass
 
 rabbit = Rabbit("Jimmy")
-hawk = Hawk("Baaz")
+hawk = Hawk("Baaz ")
 fish = Fish("Goldy")
 
 print("------------")
