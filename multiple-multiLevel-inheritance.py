@@ -3,7 +3,7 @@ class Animal():
         self.name = name
     
     def eat(self):
-        print(f"{self.name}  is eating")
+        print(f"{self.name} is eating")
         
     def sleep(self):
         print(f"{self.name}  is sleeping")
