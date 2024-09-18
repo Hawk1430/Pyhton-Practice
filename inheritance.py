@@ -4,7 +4,7 @@ class Animal():
         self.isAlive = True
     
     def walk(self):
-        print(f"{self.name} is walking")
+        print(f"{self.name}  is walking")
 
 class Dog(Animal):
     def voice(self):
