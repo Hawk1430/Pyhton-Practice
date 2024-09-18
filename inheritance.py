@@ -8,7 +8,7 @@ class Animal():
 
 class Dog(Animal):
     def voice(self):
-        print(f"{self.name} is barking")
+        print(f"{self.name}  is barking")
         
 dog = Dog("Jimmy")
 
