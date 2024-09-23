@@ -10,7 +10,7 @@ class Dog(Animal):
     def voice(self):
         print(f"{self.name}   is barking")
         
-dog = Dog("Jimm y")
+dog = Dog("Jimmy")
 
 dog.walk()
 dog.voice()
